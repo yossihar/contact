@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px 10%;
+    background:
+    linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.9)),
+    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    max-width:1200px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.content h1{
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.content h1 span{
+    color:#38bdf8;
+}
+
+.content p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#38bdf8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+/* FORM */
+.contact-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.contact-card h2{
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:15px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#cbd5e1;
+}
+
+textarea{
+    resize:none;
+    height:130px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0ea5e9;
+    transform:translateY(-2px);
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    background:#020617;
+}
+
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .content{
+        text-align:center;
+    }
+
+    .contact-info{
+        align-items:center;
+    }
+
+    .content h1{
+        font-size:2.3rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="container">
+
+        <div class="content">
+            <h1>Hubungi <span>Kami</span></h1>
+
+            <p>
+                Siap membantu kebutuhan bisnis Anda. Hubungi kami untuk
+                konsultasi, penawaran, atau kerja sama. Tim kami akan
+                merespons dengan cepat dan profesional.
+            </p>
+
+            <div class="contact-info">
+
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div>Pontianak, Kalimantan Barat</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">📞</div>
+                    <div>+62 812 3456 7890</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">✉️</div>
+                    <div>info@websiteanda.com</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <h2>Kirim Pesan</h2>
+
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Nama Lengkap">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Subjek">
+                </div>
+
+                <div class="form-group">
+                    <textarea placeholder="Tulis pesan Anda..."></textarea>
+                </div>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 Company Name. All Rights Reserved.
+</footer>
+
+</body>
+</html>
